@@ -118,13 +118,13 @@ public static partial class ActualEntityCollideHitbox {
             for (int i = 0; i < 9; i++) {
                 for (int j = 0; j < 8; j++) {
                     invokeOrig(color);
-                    entity.Position.X += 1;
+                    entity.Position.X -= 1;
                 }
                 
-                entity.Position.X -= 8;
-                entity.Position.Y += 1;
+                entity.Position.X += 8;
+                entity.Position.Y -= 1;
             }
-            entity.Position.Y -= 9;
+            entity.Position.Y += 9;
             return;
         }
 
