@@ -70,10 +70,18 @@ public static partial class ActualEntityCollideHitbox {
         Vector2 origPosition = player.Position;
 
         player.Position = hitboxPosition;
-
-        Draw.HollowRect(origCollider, PlayerHitboxColor);
+        
+        float width = hurtbox.Width;
+        float height = hurtbox.Height;
+        hurtbox.Width = 1;
+        hurtbox.Height = 1;
+        
+        //Draw.HollowRect(origCollider, PlayerHitboxColor);
         player.Collider = hurtbox;
         Draw.HollowRect(hurtbox, PlayerHurtboxColor);
+        
+        hurtbox.Width = width;
+        hurtbox.Height = height;
 
         player.Collider = origCollider;
         player.Position = origPosition;
