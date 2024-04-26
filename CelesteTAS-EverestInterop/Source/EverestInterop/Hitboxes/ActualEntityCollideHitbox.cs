@@ -190,6 +190,7 @@ public static partial class ActualEntityCollideHitbox {
             }
             entity.Position.Y -= 9;
             entity.Position = currentPosition;
+            
         }
     }
 
